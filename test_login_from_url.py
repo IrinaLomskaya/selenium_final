@@ -2,7 +2,7 @@ import pytest
 from .pages.login_page import LoginPage
 from .pages.general_page import GeneralPage
 
-link = "http://192.168.114.86/mo2030/logging/auth"
+link = ""
 
 """
 Проверка присутствия элементов на странице авторизации
@@ -22,7 +22,7 @@ class TestGeneralPageUsage:
     def setup(self, browser):
         page = LoginPage(browser, link)
         page.open()
-        page.login_user(login="mo1", password="mo1")
+        page.login_user(login="", password="")
         page.open()
 
     def test_general_page(self, browser):
